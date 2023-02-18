@@ -15,4 +15,34 @@ public class CS102_HW2{
             data[i] = (randomNum.nextInt(101));
         }
     }
+
+    public static int largest(int[] input)
+    {
+         int maximum = Integer.MIN_VALUE;
+         
+        
+        for (int m = 0; m < input.length; m++)
+        {
+            if (input[m] > maximum)
+            {
+                maximum = input[m];
+            }
+        }
+            
+         
+        return maximum;
+    }
+    public static int smallest(int[] input)
+    {
+        int minimum = Integer.MAX_VALUE;
+
+        for (int m =0; m < input.length; m++)
+        {
+            if (input[m] < minimum)
+            {
+                minimum = input[m];
+            }
+        }
+        return minimum;
+    }
 }
