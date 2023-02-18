@@ -14,6 +14,32 @@ public class CS102_HW2{
         for(int i = 0 ; i < data.length ; i++){
             data[i] = (randomNum.nextInt(101));
         }
+
+        int option= 0;
+        while (option != 4) {
+            System.out.println("Select the option you want");
+            System.out.println("1- Find the minimum and maximum of the array");
+            System.out.println("2- Find the average of the array");
+            System.out.println("3- Find the sum of elements with odd and even numbered indexes");
+            System.out.println("4-Exit");
+            option = in.nextInt();
+            
+            if (option  == 1) {
+                System.out.println("Minimum value of the array is: " + smallest(data));
+                System.out.println("Maximum value of the array is : " + largest(data));
+            }
+            else if (option == 2) {
+                findAvAndDifference(data);
+            }
+            else if (option == 3) {
+                System.out.println("The sum of the odd indexes is: " + sumOfOdd(data));
+                System.out.println("The sum of the even indexes is: " + sumOfEven(data));
+            }
+            else {
+                option = 4;
+                System.out.println("Bye!");
+            }
+        }
     }
 
     public static int largest(int[] input)
